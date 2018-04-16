@@ -86,6 +86,7 @@ export default {
         // Open graph
         { property: 'og:title', content: 'La Tinta Magazine' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://latintamagazine.com' },
         { property: 'og:description', content: 'Primera revista cubana de arte corporal' },
         { property: 'og:image', content: 'https://latintamagazine.com/img/logo-300.png' },
         // Twitter
