@@ -1,13 +1,12 @@
 <template lang="html">
   <div class="container mx-auto flex flex-col min-h-screen">
     <div class="p-4 flex">
-      <div class="text-center flex flex-col items-center w-12 md:w-32">
+      <div class="text-center flex flex-col items-center w-12">
         <img src="~/assets/img/logo.svg" alt="La Tinta Magazine" class="flex-none">
-        <!-- <h3 class="font-sans-1 text-center font-bold tracking-wide uppercase text-sm pl-1 pr-1">En construcción</h3> -->
       </div>
 
-      <div class="flex-1 flex justify-center text-center font-sans-1 uppercase text-sm -ml-10 md:-ml-16 md:text-base">
-        Primera revista cubana<br>de arte comporal<br>(en construcción)
+      <div class="flex-1 flex justify-center text-center font-sans-1 uppercase text-xs -ml-10 md:text-sm">
+        Primera revista cubana<br>de arte corporal<br>(en construcción)
       </div>
     </div>
 
@@ -74,3 +73,25 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return {
+      title: 'La Tinta Magazine',
+      meta: [
+        { property: 'og:title', content: 'La Tinta Magazine' },
+        { name: 'description', content: 'Primera revista cubana de arte corporal' },
+        { name: 'keywords', content: 'revista, arte corporal, tatuajes, cuba' },
+        // Open graph
+        { property: 'og:title', content: 'La Tinta Magazine' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:description', content: 'Primera revista cubana de arte corporal' },
+        { property: 'og:image', content: 'https://latintamagazine.com/img/logo-300.png' },
+        // Twitter
+        { name: 'twitter:card', content: 'https://latintamagazine.com/img/logo-300.png' }
+      ]
+    }
+  }
+}
+</script>
