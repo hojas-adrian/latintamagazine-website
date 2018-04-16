@@ -6,3 +6,12 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: local('/fonts/Metropolis Medium'), local('/fonts/Metropolis-Medium'),
+    url('/fonts/Metropolis-Medium.woff2') format('woff2'),
+    url('/fonts/Metropolis-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}

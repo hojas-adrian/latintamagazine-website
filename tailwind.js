@@ -49,6 +49,8 @@ let colors = {
 
   'black': '#000000',
   'white': '#ffffff',
+
+  'grey-1': '#bbbbbb',
 }
 
 module.exports = {
@@ -173,6 +175,8 @@ module.exports = {
   */
 
   textSizes: {
+    'xs': '0.65rem',
+    'sm': '0.75rem',
     'base': '1rem',
   },
 
@@ -192,6 +196,7 @@ module.exports = {
   */
 
   fontWeights: {
+    'medium': 500,
     'bold': 700,
   },
 
@@ -611,6 +616,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '3rem',
+    '16': '8rem',
   },
 
 

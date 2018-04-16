@@ -10,4 +10,9 @@
     font-size: 16px;
     min-height: 100%;
   }
+  a,
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 </style>
