@@ -7,7 +7,7 @@
       </div>
 
       <div class="flex-1 flex justify-center text-center font-sans-1 uppercase text-sm -ml-10 md:-ml-16 md:text-base">
-        Primera revista cubana<br>de arte comporal
+        Primera revista cubana<br>de arte comporal<br>(en construcción)
       </div>
     </div>
 
