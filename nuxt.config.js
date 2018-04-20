@@ -1,4 +1,17 @@
+require('dotenv').config()
+
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+      debug: {
+        sendHitTask: isProduction
+      }
+    }]
+  ],
+
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -16,6 +29,7 @@ module.exports = {
       { rel: 'apple-touch-icon', href: '/img/favicon-152.png', sizes: '152x152' },
     ],
   },
+
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/tailwind.css',
