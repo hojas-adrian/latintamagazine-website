@@ -108,13 +108,13 @@ export default {
               text: 'Descargar #01',
               url: 'http://bit.ly/LaTinta01_96dpi',
               description: '(92ppi)',
-              size: '14.3Mb',
+              size: '18.7Mb',
             },
             {
               text: 'Descargar #01',
               url: 'http://bit.ly/LaTinta01_144dpi',
               description: '(144ppi)',
-              size: '29.4Mb',
+              size: '30.2Mb',
             },
           ]
         },
