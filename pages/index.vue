@@ -10,58 +10,43 @@
       </div>
     </div>
 
-    <div class="flex-1 flex justify-center">
-      <div class="max-w-sm pl-4 pr-4">
-        <div class="uppercase text-center pb-2 font-sans-1 font-medium">
-          marzo - abril
-        </div>
+    <div class="flex-1 flex justify-center flex-wrap">
+      <template v-for="(issue, i) in issues">
+        <div class="max-w-sm pl-4 pr-4 mb-4">
+          <div class="text-center pb-2 font-sans-1 font-medium">
+            {{ issue.title }}
+          </div>
 
-        <div class="">
-          <img src="~/assets/img/n00-cover.jpg" alt="Nº 00 MARZO-ABRIL" class="max-w-full h-auto">
-        </div>
+          <div>
+            <img :src="issue.cover" :alt="issue.title" class="max-w-full h-auto">
+          </div>
 
-        <div class="mt-4">
-          <a class="flex items-center" target="_blank" href="https://drive.google.com/file/d/1oVsYBnQvM5PaEeG5ukx633hkVQabg1d4/view?usp=sharing">
-            <div class="flex-1">
-              <div class="flex items-center flex-1">
-                <div class="flex-1 truncate">
-                  <div class="uppercase font-sans-1 font-medium truncate">
-                    Descargar #00s
+          <div class="mt-4">
+            <template v-for="(link, j) in issue.links">
+              <a class="flex items-center" target="_blank" :class="{'mt-4': j > 0}" :href="link.url">
+                <div class="flex-1">
+                  <div class="flex items-center flex-1">
+                    <div class="flex-1 truncate">
+                      <div class="uppercase font-sans-1 font-medium truncate">
+                        {{ link.text }}
+                      </div>
+                    </div>
+
+                    <div class="pr-4">
+                      {{ link.size }}
+                    </div>
+                  </div>
+                  <div class="text-sm font-sans-1 font-medium">
+                    {{ link.description }}
                   </div>
                 </div>
-
-                <div class="pr-4">
-                  14.3Mb
-                </div>
-              </div>
-              <div class="text-sm font-sans-1 font-medium">
-                (92ppi)
-              </div>
-            </div>
-            <svg class="fill-current text-black w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.3 32.46"><defs><style>.cls-2{clip-path:url(#clip-path)}</style><clipPath id="clip-path"><path fill="none" d="M0 0h32.3v32.47H0z"/></clipPath></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M32.3 32.47H0V0h32.3zm-30.3-2h28.3V2H2z"/><path d="M16.15 21.72l-7.16-6.84 1.39-1.45 5.77 5.52 5.77-5.52 1.39 1.45-7.16 6.84z"/><path d="M15.15.73h2v19.5h-2z"/></g></g></svg>
-          </a>
-
-          <a class="flex items-center mt-4" target="_blank" href="https://drive.google.com/file/d/1g-UDphj1jfslpZX9kMqE34_xjjRrk04E/view?usp=sharing">
-            <div class="flex-1">
-              <div class="flex items-center flex-1">
-                <div class="flex-1 truncate">
-                  <div class="uppercase font-sans-1 font-medium truncate">
-                    Descargar #00s
-                  </div>
-                </div>
-
-                <div class="pr-4">
-                  29.4Mb
-                </div>
-              </div>
-              <div class="text-sm font-sans-1 font-medium">
-                (144ppi)
-              </div>
-            </div>
-            <svg class="fill-current text-black w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.3 32.46"><defs><style>.cls-2{clip-path:url(#clip-path)}</style><clipPath id="clip-path"><path fill="none" d="M0 0h32.3v32.47H0z"/></clipPath></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M32.3 32.47H0V0h32.3zm-30.3-2h28.3V2H2z"/><path d="M16.15 21.72l-7.16-6.84 1.39-1.45 5.77 5.52 5.77-5.52 1.39 1.45-7.16 6.84z"/><path d="M15.15.73h2v19.5h-2z"/></g></g></svg>
-          </a>
+                <svg class="fill-current text-black w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.3 32.46"><defs><style>.cls-2{clip-path:url(#clip-path)}</style><clipPath id="clip-path"><path fill="none" d="M0 0h32.3v32.47H0z"/></clipPath></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M32.3 32.47H0V0h32.3zm-30.3-2h28.3V2H2z"/><path d="M16.15 21.72l-7.16-6.84 1.39-1.45 5.77 5.52 5.77-5.52 1.39 1.45-7.16 6.84z"/><path d="M15.15.73h2v19.5h-2z"/></g></g></svg>
+              </a>
+            </template>
+          </div>
         </div>
-      </div>
+      </template>
+
     </div>
 
     <footer>
@@ -92,6 +77,49 @@ export default {
         // Twitter
         { name: 'twitter:card', content: 'https://latintamagazine.com/img/logo-300.png' }
       ]
+    }
+  },
+
+  data () {
+    return {
+      issues: [
+        {
+          title: 'No. 00 MARZO-ABRIL',
+          cover: '/issues/covers/n00-cover.jpg',
+          links: [
+            {
+              text: 'Descargar #00',
+              url: 'http://bit.ly/LaTinta00_96dpi',
+              description: '(92ppi)',
+              size: '14.3Mb',
+            },
+            {
+              text: 'Descargar #00',
+              url: 'http://bit.ly/LaTinta00_144dpi',
+              description: '(144ppi)',
+              size: '29.4Mb',
+            },
+          ]
+        },
+        {
+          title: 'No. 01 MAYO-JUNIO',
+          cover: '/issues/covers/n01-cover.jpg',
+          links: [
+            {
+              text: 'Descargar #01',
+              url: 'http://bit.ly/LaTinta01_96dpi',
+              description: '(92ppi)',
+              size: '14.3Mb',
+            },
+            {
+              text: 'Descargar #01',
+              url: 'http://bit.ly/LaTinta01_144dpi',
+              description: '(144ppi)',
+              size: '29.4Mb',
+            },
+          ]
+        },
+      ].reverse()
     }
   }
 }
