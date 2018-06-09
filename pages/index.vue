@@ -65,7 +65,6 @@ export default {
     return {
       title: 'La Tinta Magazine',
       meta: [
-        { property: 'og:title', content: 'La Tinta Magazine' },
         { name: 'description', content: 'Primera revista cubana de arte corporal' },
         { name: 'keywords', content: 'revista, arte corporal, tatuajes, cuba' },
         // Open graph
