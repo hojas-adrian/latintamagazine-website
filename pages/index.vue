@@ -125,13 +125,13 @@ export default {
           links: [
             {
               text: 'Descargar #02',
-              url: 'http://bit.ly/LaTinta02_96dpi',
+              url: 'http://bit.ly/LaTinta_No02_96dpi',
               description: '(92ppi)',
               size: '19.6Mb',
             },
             {
               text: 'Descargar #02',
-              url: 'http://bit.ly/LaTinta02_144dpi',
+              url: 'http://bit.ly/LaTinta_No02_96dpi',
               description: '(144ppi)',
               size: '34Mb',
             },
