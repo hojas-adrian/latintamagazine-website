@@ -12,7 +12,7 @@
         </transition>
       </template>
     </ul>
-    <div class="slider__overlay">
+    <div class="absolute w-full pin-b flex items-end">
       <div
         v-if="activeItem"
         class="slider__title flex-1 text-xl tracking-wide uppercase text-white text-right p-4 relative sm:text-4xl"
