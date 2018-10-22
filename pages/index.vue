@@ -17,15 +17,18 @@
                   <img :src="issue.cover.url" :alt="issue.title">
                 </header>
                 <main>
-                  <template v-for="(link, j) in issue.links.slice(1)">
+                  <template v-for="(link, j) in issue.links">
                     <a
                       class="flex pt-2 pb-2 items-end"
                       target="_blank"
                       :key="j"
                       :href="link.url"
                     >
-                      <div class="text-3xl font-sans-1">
-                        {{ link.text }}
+                      <div class="text-3xl leading-none font-sans font-bold">
+                        #{{ issue.number.toString().padStart(2, '0') }}
+                      </div>
+                      <div class="leading-none ml-2">
+                        {{ link.description }}
                       </div>
                       <div class="flex-1 self-end border-b-4 border-dotted ml-2 mr-2"></div>
                       <v-download-icon class="w-12"></v-download-icon>
