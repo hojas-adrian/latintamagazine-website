@@ -2,7 +2,9 @@
   <nav class="fixed pin-t w-full bg-white z-50" style="backface-visibility: hidden;">
     <div class="top-bar__content container max-w-xl mx-auto">
       <div class="flex items-start p-4">
-        <img src="~assets/img/logo.svg" alt="Logo La Tinta" class="logo block">
+        <a class="block" href="/">
+          <img src="~assets/img/logo.svg" alt="Logo La Tinta" class="logo block">
+        </a>
         <div class="flex-1 text-center uppercase tracking-wide text-sm font-bold">
           {{ title }}
         </div>
@@ -83,7 +85,7 @@ export default {
   height: 5.5rem;
 }
 .logo {
-  max-width: 3.5rem;
+  width: 3.4rem;
 }
 .menu-toggler {
   display: block;
