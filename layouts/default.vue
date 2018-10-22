@@ -46,11 +46,11 @@ export default {
       return [
         {
           icon: 'facebook',
-          url: 'https://facebook.com/@latinta.magazine'
+          url: 'https://www.facebook.com/latinta.magazine/'
         },
         {
           icon: 'instagram',
-          url: 'https://instagram.com/@latinta_magazine'
+          url: 'https://www.instagram.com/latinta_magazine/'
         },
       ]
     }
