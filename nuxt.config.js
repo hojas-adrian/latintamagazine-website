@@ -34,4 +34,8 @@ module.exports = {
     '~/assets/css/fonts.css',
     '~/assets/css/tailwind.css',
   ],
+
+  plugins: [
+    '~/plugins/components'
+  ],
 }

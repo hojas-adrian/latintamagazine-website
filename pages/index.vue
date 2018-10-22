@@ -1,67 +1,87 @@
 <template lang="html">
-  <div class="container mx-auto flex flex-col min-h-screen max-w-xl">
-    <div class="p-4 flex">
-      <div class="text-center flex flex-col items-center w-12">
-        <img src="~/assets/img/logo.svg" alt="La Tinta Magazine" class="flex-none">
-      </div>
-
-      <div class="flex-1 flex justify-center text-center font-sans-1 uppercase text-xs -ml-10 md:text-sm">
-        Primera revista cubana<br>de arte corporal<br>(en construcción)
-      </div>
+  <main class="container mx-auto flex flex-col min-h-screen max-w-xl">
+    <div class="pl-4 pr-4">
+      <v-slider auto loop issue="03" :items="slides"></v-slider>
     </div>
 
-    <div class="flex flex-1 justify-center">
-      <div class="flex flex-wrap">
-        <template v-for="(issue, i) in issues">
-          <div class="w-full pl-4 pr-4 mb-4 md:w-1/2">
-            <div class="text-center pb-2 font-sans-1 font-medium">
-              {{ issue.title }}
-            </div>
+    <section id="issues" class="pt-5.5">
+      <div class="container max-w-xl mx-auto">
+        <h1 class="uppercase text-base text-center tracking-wide pb-6">Ediciones</h1>
 
-            <div>
-              <img :src="issue.cover" :alt="issue.title" class="w-full h-auto">
-            </div>
-
-            <div class="mt-4">
-              <template v-for="(link, j) in issue.links">
-                <a class="flex items-center" target="_blank" :class="{'mt-4': j > 0}" :href="link.url">
-                  <div class="flex-1">
-                    <div class="flex items-center flex-1">
-                      <div class="flex-1 truncate">
-                        <div class="uppercase font-sans-1 font-medium truncate">
-                          {{ link.text }}
-                        </div>
+        <div class="flex flex-wrap pl-2 pr-2">
+          <template v-for="(issue, i) in sortedIssues">
+            <div class="w-full p-2 flex items-end sm:w-1/2 md:w-1/3 lg:w-1/4" :key="i">
+              <article>
+                <header>
+                  <h2 class="uppercase text-sm font-medium text-right leading-none pb-4">{{ issue.title }}</h2>
+                  <img :src="issue.cover.url" :alt="issue.title">
+                </header>
+                <main>
+                  <template v-for="(link, j) in issue.links.slice(1)">
+                    <a
+                      class="flex pt-2 pb-2 items-end"
+                      target="_blank"
+                      :key="j"
+                      :href="link.url"
+                    >
+                      <div class="text-3xl font-sans-1">
+                        {{ link.text }}
                       </div>
-
-                      <div class="pr-4">
-                        {{ link.size }}
-                      </div>
-                    </div>
-                    <div class="text-sm font-sans-1 font-medium">
-                      {{ link.description }}
-                    </div>
-                  </div>
-                  <svg class="fill-current text-black w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.3 32.46"><defs><style>.cls-2{clip-path:url(#clip-path)}</style><clipPath id="clip-path"><path fill="none" d="M0 0h32.3v32.47H0z"/></clipPath></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M32.3 32.47H0V0h32.3zm-30.3-2h28.3V2H2z"/><path d="M16.15 21.72l-7.16-6.84 1.39-1.45 5.77 5.52 5.77-5.52 1.39 1.45-7.16 6.84z"/><path d="M15.15.73h2v19.5h-2z"/></g></g></svg>
-                </a>
-              </template>
+                      <div class="flex-1 self-end border-b-4 border-dotted ml-2 mr-2"></div>
+                      <v-download-icon class="w-12"></v-download-icon>
+                    </a>
+                  </template>
+                </main>
+              </article>
             </div>
-          </div>
-        </template>
-      </div>
-    </div>
-
-    <footer>
-      <div class="container mx-auto">
-        <div class="uppercase text-xs p-4 text-center tracking-wide text-grey-1">
-          2018 &copy; La Tinta Magazine
+          </template>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
+
+    <section id="about" class="pt-5.5 pb-5.5">
+      <div class="container max-w-sm mx-auto">
+        <h1 class="uppercase text-base text-center tracking-wide pb-6">Nosotros</h1>
+
+        <div class="bg-black pt-6 pb-6">
+          <h2 class="uppercase text-base text-center text-white tracking-wide pb-6 pl-4 pr-4">LATINTA_Equipo Creativo</h2>
+
+          <div class="pl-4 pr-4 text-white text-justify">
+            <p>La Tinta es la primera y única revista sobre Arte Corporal que se hace desde Cuba.
+              Somos un equipo de diseñadores, periodistas, fotógrafos y profesionales del
+              arte del tatuaje que trabajamos para difundir —dentro y fuera de la isla— la
+              cultura artística y el talento de una profesión que en Cuba alcanza hoy niveles
+              de calidad impresionantes.<br>
+              Nuestras metas de información están enfocadas hacia las artes visuales y
+              al arte de carácter estético cuyo eje central sea el cuerpo humano.De modo que
+              en nuestras páginas podrás conocer sobre tatuajes y piercings en la misma medida
+              que el bodypainting, el performance, etc. todo con el sello cubano.<br>
+              Si te interesa colaborar con nuestro proyecto pues escríbenos y si te gusta la temática
+              pídenos qué quieres conocer. La Tinta te propone un camino, pero la marca la haces tú.</p>
+            </div>
+
+            <div class="text-center pt-6 pl-4 pr-4 text-white">
+              <v-gremio-icon class="w-8 pb-4"></v-gremio-icon>
+              <a class="block" href="mailto:elgremio@zoho.com">elgremio@zoho.com</a>
+              <a class="block" href="https://facebook.com/@elgremio.creativo">@elgremio.creativo</a>
+              <a class="block" href="tel:+53 53460256">+53 53460256</a>
+              <a class="block" href="tel:+53 72601192">+53 72601192</a>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
 </template>
 
 <script>
+import orderBy from 'lodash/orderBy';
+
 export default {
+  async asyncData ({ store }) {
+    await store.dispatch('slides/fetchItems');
+    await store.dispatch('issues/fetchItems');
+  },
+
   head () {
     return {
       title: 'La Tinta Magazine',
@@ -80,64 +100,15 @@ export default {
     }
   },
 
-  data () {
-    return {
-      issues: [
-        {
-          title: 'No. 00 MARZO-ABRIL',
-          cover: '/issues/covers/n00-cover.jpg',
-          links: [
-            {
-              text: 'Descargar #00',
-              url: 'http://bit.ly/LaTinta00_96dpi',
-              description: '(92ppi)',
-              size: '14.3Mb',
-            },
-            {
-              text: 'Descargar #00',
-              url: 'http://bit.ly/LaTinta00_144dpi',
-              description: '(144ppi)',
-              size: '29.4Mb',
-            },
-          ]
-        },
-        {
-          title: 'No. 01 MAYO-JUNIO',
-          cover: '/issues/covers/n01-cover.jpg',
-          links: [
-            {
-              text: 'Descargar #01',
-              url: 'http://bit.ly/LaTinta01_96dpi',
-              description: '(92ppi)',
-              size: '18.7Mb',
-            },
-            {
-              text: 'Descargar #01',
-              url: 'http://bit.ly/LaTinta01_144dpi',
-              description: '(144ppi)',
-              size: '30.2Mb',
-            },
-          ]
-        },
-        {
-          title: 'No. 02 JULIO-AGOSTO',
-          cover: '/issues/covers/n02-cover.jpg',
-          links: [
-            {
-              text: 'Descargar #02',
-              url: 'http://bit.ly/LaTinta_No02_96dpi',
-              description: '(92ppi)',
-              size: '19.6Mb',
-            },
-            {
-              text: 'Descargar #02',
-              url: 'http://bit.ly/LaTinta_No02_96dpi',
-              description: '(144ppi)',
-              size: '34Mb',
-            },
-          ]
-        },
-      ].reverse()
+  computed: {
+    slides () {
+      return this.$store.getters['slides/items'];
+    },
+    issues () {
+      return this.$store.getters['issues/items'];
+    },
+    sortedIssues () {
+      return orderBy(this.issues, 'order', 'desc');
     }
   }
 }

@@ -1,0 +1,86 @@
+[
+  {
+    "title": "MAR-ABR '18",
+    "order": 0,
+    "cover": {
+      "url": "/issues/00/00-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#00",
+        "url": "http://bit.ly/LaTinta00_96dpi",
+        "description": "(92ppi)",
+        "size": "14.3Mb"
+      },
+      {
+        "text": "#00",
+        "url": "http://bit.ly/LaTinta00_144dpi",
+        "description": "(144ppi)",
+        "size": "29.4Mb"
+      }
+    ]
+  },
+  {
+    "title": "MAY-JUN '18",
+    "order": 1,
+    "cover": {
+      "url": "/issues/01/01-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#01",
+        "url": "http://bit.ly/LaTinta01_96dpi",
+        "description": "(92ppi)",
+        "size": "18.7Mb"
+      },
+      {
+        "text": "#01",
+        "url": "http://bit.ly/LaTinta01_144dpi",
+        "description": "(144ppi)",
+        "size": "30.2Mb"
+      }
+    ]
+  },
+  {
+    "title": "JUL-AGO '18",
+    "order": 2,
+    "cover": {
+      "url": "/issues/02/02-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#02",
+        "url": "http://bit.ly/LaTinta_No02_96dpi",
+        "description": "(92ppi)",
+        "size": "19.6Mb"
+      },
+      {
+        "text": "#02",
+        "url": "http://bit.ly/LaTinta_No02_144dpi",
+        "description": "(144ppi)",
+        "size": "34Mb"
+      }
+    ]
+  },
+  {
+    "title": "SEP-OCT '18",
+    "order": 3,
+    "cover": {
+      "url": "/issues/03/03-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#03",
+        "url": "http://bit.ly/LaTinta_No03_96dpi",
+        "description": "(92ppi)",
+        "size": "19.6Mb"
+      },
+      {
+        "text": "#03",
+        "url": "http://bit.ly/LaTinta_No03_144dpi",
+        "description": "(144ppi)",
+        "size": "34Mb"
+      }
+    ]
+  }
+]

@@ -94,7 +94,7 @@ module.exports = {
     'sm': '576px',
     'md': '768px',
     'lg': '992px',
-    'xl': '1200px',
+    'xl': '1920px',
   },
 
 
@@ -175,9 +175,15 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '0.6rem',
-    'sm': '0.72rem',
-    'base': '1rem',
+    'xs': '.75rem',     // 12px
+    'sm': '.875rem',    // 14px
+    'base': '1rem',     // 16px
+    'lg': '1.125rem',   // 18px
+    'xl': '1.25rem',    // 20px
+    '2xl': '1.5rem',    // 24px
+    '3xl': '1.875rem',  // 30px
+    '4xl': '2.25rem',   // 36px
+    '5xl': '3rem',      // 48px
   },
 
 
@@ -236,7 +242,7 @@ module.exports = {
   tracking: {
     'tight': '-0.05em',
     'normal': '0',
-    'wide': '0.05em',
+    'wide': '0.2em',
   },
 
 
@@ -504,11 +510,10 @@ module.exports = {
   */
 
   maxWidth: {
-    'xs': '20rem',
-    'sm': '30rem',
-    'md': '40rem',
-    'lg': '50rem',
-    'xl': '60rem',
+    'sm': '576px',
+    'md': '768px',
+    'lg': '992px',
+    'xl': '1920px',
     '2xl': '70rem',
     '3xl': '80rem',
     '4xl': '90rem',
@@ -559,8 +564,9 @@ module.exports = {
     '2': '0.5rem',
     '3': '0.75rem',
     '4': '1rem',
+    '5.5': '5.5rem',
     '6': '1.5rem',
-    '8': '2rem',
+    '8': '8rem',
   },
 
 
@@ -588,7 +594,7 @@ module.exports = {
     '3': '0.75rem',
     '4': '1rem',
     '6': '1.5rem',
-    '8': '2rem',
+    '8': '8rem',
   },
 
 
@@ -750,51 +756,51 @@ module.exports = {
   */
 
   modules: {
-    appearance: ['responsive'],
+    appearance: [],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover'],
+    backgroundColors: ['hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
-    borderColors: ['responsive', 'hover'],
-    borderRadius: ['responsive'],
+    borderColors: ['hover'],
+    borderRadius: [],
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
-    cursor: ['responsive'],
+    cursor: [],
     display: ['responsive'],
     flexbox: ['responsive'],
     // float: ['responsive'],
-    fonts: ['responsive'],
-    fontWeights: ['responsive', 'hover'],
+    fonts: [],
+    fontWeights: [],
     height: ['responsive'],
-    leading: ['responsive'],
-    lists: ['responsive'],
+    leading: [],
+    lists: [],
     margin: ['responsive'],
     maxHeight: ['responsive'],
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
-    opacity: ['responsive'],
-    overflow: ['responsive'],
+    opacity: [],
+    overflow: [],
     padding: ['responsive'],
-    pointerEvents: ['responsive'],
+    pointerEvents: [],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive'],
+    shadows: [],
     svgFill: [],
     svgStroke: [],
-    textAlign: ['responsive'],
-    textColors: ['responsive', 'hover'],
+    textAlign: [],
+    textColors: ['hover'],
     textSizes: ['responsive'],
-    textStyle: ['responsive', 'hover'],
-    tracking: ['responsive'],
-    userSelect: ['responsive'],
-    verticalAlign: ['responsive'],
-    visibility: ['responsive'],
-    whitespace: ['responsive'],
+    textStyle: ['hover'],
+    tracking: [],
+    userSelect: [],
+    // verticalAlign: ['responsive'],
+    // visibility: ['responsive'],
+    whitespace: [],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    // zIndex: ['responsive'],
   },
 
 
