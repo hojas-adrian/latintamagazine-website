@@ -15,7 +15,7 @@
     <div class="slider__overlay">
       <div
         v-if="activeItem"
-        class="slider__title flex-1 text-2xl tracking-wide uppercase text-white text-right p-4 relative sm:text-4xl"
+        class="slider__title flex-1 text-xl tracking-wide uppercase text-white text-right p-4 relative sm:text-4xl"
       >
         <span>_</span>
         <template v-for="(text, i) in activeItem.text.split('\n')">
