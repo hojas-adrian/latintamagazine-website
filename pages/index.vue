@@ -46,17 +46,17 @@
         <div class="bg-black pt-6 pb-6">
           <h2 class="uppercase text-base text-center text-white tracking-wide pb-6 pl-4 pr-4">LATINTA_Equipo Creativo</h2>
 
-          <div class="pl-4 pr-4 text-white text-justify">
+          <div class="pl-4 pr-4 text-white text-left html-raw">
             <p>La Tinta es la primera y única revista sobre Arte Corporal que se hace desde Cuba.
               Somos un equipo de diseñadores, periodistas, fotógrafos y profesionales del
               arte del tatuaje que trabajamos para difundir —dentro y fuera de la isla— la
               cultura artística y el talento de una profesión que en Cuba alcanza hoy niveles
-              de calidad impresionantes.<br>
-              Nuestras metas de información están enfocadas hacia las artes visuales y
+              de calidad impresionantes.</p>
+              <p>Nuestras metas de información están enfocadas hacia las artes visuales y
               al arte de carácter estético cuyo eje central sea el cuerpo humano.De modo que
               en nuestras páginas podrás conocer sobre tatuajes y piercings en la misma medida
-              que el bodypainting, el performance, etc. todo con el sello cubano.<br>
-              Si te interesa colaborar con nuestro proyecto pues escríbenos y si te gusta la temática
+              que el bodypainting, el performance, etc. todo con el sello cubano.</p>
+              <p>Si te interesa colaborar con nuestro proyecto pues escríbenos y si te gusta la temática
               pídenos qué quieres conocer. La Tinta te propone un camino, pero la marca la haces tú.</p>
             </div>
 
