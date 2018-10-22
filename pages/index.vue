@@ -1,7 +1,7 @@
 <template lang="html">
   <main class="container mx-auto flex flex-col min-h-screen max-w-xl">
     <div class="pl-4 pr-4">
-      <v-slider auto loop issue="03" :items="slides"></v-slider>
+      <v-slider auto loop :issue="sortedIssues[0]" :items="slides"></v-slider>
     </div>
 
     <section id="issues" class="pt-5.5">
@@ -108,7 +108,7 @@ export default {
       return this.$store.getters['issues/items'];
     },
     sortedIssues () {
-      return orderBy(this.issues, 'order', 'desc');
+      return orderBy(this.issues, 'number', 'desc');
     }
   }
 }

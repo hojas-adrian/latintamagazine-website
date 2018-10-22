@@ -26,10 +26,12 @@
       </div>
       <div class="bg-white">
         <div class="text-4xl font-sans font-bold pl-4 pr-4 pt-4 pb-2 text-black">
-          Nº<br>{{ issue }}
+          Nº<br>{{ issue.number.toString().padStart(2, '0') }}
         </div>
         <div class="pl-4 pr-4">
-          <v-download-inverted-icon class="w-12"></v-download-inverted-icon>
+          <a class="block" target="_blank" :href="issue.links[1].url">
+            <v-download-inverted-icon class="w-12"></v-download-inverted-icon>
+          </a>
         </div>
       </div>
     </div>
@@ -39,7 +41,7 @@
 <script>
 export default {
   props: {
-    issue: String,
+    issue: Object,
     items: Array,
     delay: { default: 6000 },
     auto: Boolean,

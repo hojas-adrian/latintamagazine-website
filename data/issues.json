@@ -1,7 +1,7 @@
 [
   {
     "title": "MAR-ABR '18",
-    "order": 0,
+    "number": 0,
     "cover": {
       "url": "/issues/00/00-cover.jpg"
     },
@@ -22,7 +22,7 @@
   },
   {
     "title": "MAY-JUN '18",
-    "order": 1,
+    "number": 1,
     "cover": {
       "url": "/issues/01/01-cover.jpg"
     },
@@ -43,7 +43,7 @@
   },
   {
     "title": "JUL-AGO '18",
-    "order": 2,
+    "number": 2,
     "cover": {
       "url": "/issues/02/02-cover.jpg"
     },
@@ -64,7 +64,7 @@
   },
   {
     "title": "SEP-OCT '18",
-    "order": 3,
+    "number": 3,
     "cover": {
       "url": "/issues/03/03-cover.jpg"
     },
