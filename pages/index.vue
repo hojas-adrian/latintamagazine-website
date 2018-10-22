@@ -64,11 +64,8 @@
             </div>
 
             <div class="text-center pt-6 pl-4 pr-4 text-white">
-              <v-gremio-icon class="w-8 pb-4"></v-gremio-icon>
-              <a class="block" href="mailto:elgremio@zoho.com">elgremio@zoho.com</a>
-              <a class="block" href="https://facebook.com/@elgremio.creativo">@elgremio.creativo</a>
-              <a class="block" href="tel:+53 53460256">+53 53460256</a>
-              <a class="block" href="tel:+53 72601192">+53 72601192</a>
+              <a class="block" href="mailto:contacto.latinta@gmail.com">contacto.latinta@gmail.com</a>
+              <a class="block" href="tel:+53 58277251">+53 58277251</a>
             </div>
           </div>
         </div>
