@@ -1,8 +1,8 @@
-<template lang="html">
+<template> 
   <div class="slider">
     <ul class="slider__items">
       <template v-for="(item, i) in items">
-        <transition name="slider__item">
+        <transition name="slider__item" :key="i">
           <li v-show="i === activeIndex" class="slider__item" :key="i">
             <div
               class="slider__item__background"
@@ -12,27 +12,23 @@
         </transition>
       </template>
     </ul>
-    <div class="absolute w-full pin-b flex items-end">
-      <div
-        v-if="activeItem"
-        class="slider__title flex-1 text-xl tracking-wide uppercase text-white text-right p-4 relative sm:text-4xl"
-      >
-        <span>_</span>
-        <template v-for="(text, i) in activeItem.text.split('\n')">
-          <br v-if="i > 0">
-          <span>{{ text }}</span>
-        </template>
-        <span>˙</span>
+    <div class="slider__overlay">
+      <div class="slider__item__text">
+        <span 
+          v-for="(text, i) in activeTextFragments"
+          class="slider__item__text_fragment" 
+          :key="text"
+        >
+          {{ (i == 0 ? '_ ' : '') + text + (i == activeTextFragments.length - 1 ? ' ˙' : '') }}
+        </span>
       </div>
-      <div class="bg-white">
-        <div class="text-4xl font-sans font-bold pl-4 pr-4 pt-4 pb-2 text-black">
+      <div class="slider__issue">
+        <div class="slider__issue_number">
           Nº<br>{{ issue.number.toString().padStart(2, '0') }}
         </div>
-        <div class="pl-4 pr-4">
-          <a class="block" target="_blank" :href="issue.links[1].url">
-            <v-download-inverted-icon class="w-12"></v-download-inverted-icon>
-          </a>
-        </div>
+        <a class="slider__issue_link" target="_blank" :href="issue.links[1].url">
+          <v-download-inverted-icon></v-download-inverted-icon>
+        </a>
       </div>
     </div>
   </div>
@@ -65,6 +61,12 @@ export default {
       }
 
       return this.items[this.activeIndex];
+    },
+    activeText () {
+      return this.activeItem ? this.activeItem.text : null;
+    },
+    activeTextFragments () {
+      return this.activeText ? this.activeText.split('\n') : [];
     },
   },
 
@@ -111,7 +113,8 @@ export default {
 <style lang="css">
 .slider {
   position: relative;
-  height: 80.6vw;
+  height: 35.75rem;
+  background-color: #000;
 }
 .slider__items {
   position: absolute;
@@ -147,18 +150,6 @@ export default {
   width: 100%;
   display: flex;
 }
-.slider__item__text {
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #fff;
-  padding: 1rem;
-  letter-spacing: 0.25rem;
-  line-height: 2.5rem;
-  text-align: right;
-}
-.slider__title {
-  text-shadow: 1px 1px 3px rgba(0,0,0,.3);
-}
 .slider__item-enter-active,
 .slider__item-active-leave {
   transition: all 1s ease;
@@ -167,11 +158,49 @@ export default {
 .slider__item-active-leave {
   opacity: 0;
   transform: scale(0.95);
-  filter: blur(4px);
 }
-@media (min-width: 1280px) {
-  .slider {
-    height: 34rem;
-  }
+.slider__item__text_fragment-enter-active,
+.slider__item__text_fragment_active-leave {
+  transition: all 1s ease;
+}
+.slider__item__text_fragment-enter,
+.slider__item__text_fragment_active-leave {
+  opacity: 0;
+}
+.slider__item__text {
+  text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.slider__item__text_fragment {
+  white-space: nowrap;
+}
+.slider__issue {
+  position: relative;
+  background-color: #fff;
+}
+.slider__issue_number {
+  padding: 1.94rem 0.825rem 0.84rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-family: 'BlinkMacSystemFont', 'Segoe UI', 'Oxygen', 'Roboto', 'Ubuntu', 'Droid Sans', 'Hevetica Neue';
+  color: #000;
+  word-spacing: 2.22rem;
+  text-align: center;
+}
+.slider__issue_link {
+  margin: 0 0.825rem 0;
+  font-size: 1.93rem;
+  width: 1.93rem;
+  height: 1.93rem;
+  display: block;
 }
 </style>
