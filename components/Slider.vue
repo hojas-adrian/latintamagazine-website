@@ -168,7 +168,7 @@ export default {
   opacity: 0;
 }
 .slider__item__text {
-  text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  text-shadow: 1px 1px 3px rgba(0,0,0,.8);
   color: #fff;
   text-transform: uppercase;
   text-align: right;

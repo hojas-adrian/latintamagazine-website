@@ -82,5 +82,24 @@
         "size": "34Mb"
       }
     ]
+  },
+  {
+    "title": "NOV-DEC '18",
+    "number": 4,
+    "cover": {
+      "url": "/issues/04/04-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#04",
+        "url": "http://bit.ly/LaTinta_No04_96dpi",
+        "description": "(92ppi)"
+      },
+      {
+        "text": "#04",
+        "url": "http://bit.ly/LaTinta_No04_144dpi",
+        "description": "(144ppi)"
+      }
+    ]
   }
 ]
