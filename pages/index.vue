@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <main class="container mx-auto flex flex-col min-h-screen max-w-xl">
     <div class="pl-4 pr-4">
       <v-slider auto loop :issue="sortedIssues[0]" :items="slides"></v-slider>
@@ -70,6 +70,23 @@
           </div>
         </div>
     </section>
+
+    <section id="mediakit">
+      <div class="container mx-auto max-w-xl">
+        <h1 class="uppercase text-base text-center tracking-wide pb-6">Anúnciate</h1>
+        
+        <div class="flex flex-col justify-center items-center pl-4 pr-4">
+          <a class="mediakit__download__link_img" href="http://bit.ly/LaTinta_MK_dic18">
+            <img class="max-w-full md:hidden" src="~/assets/img/mediakit.jpg" alt="Media Kit">
+            <img class="max-w-full hidden md:block" src="~/assets/img/mediakit-big.jpg" alt="Media Kit">
+          </a>
+          
+          <a class="mediakit__download__link_btn mt-6" href="http://bit.ly/LaTinta_MK_dic18">
+            <v-download-icon></v-download-icon>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -113,3 +130,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.mediakit__download__link_img {
+  display: block;
+}
+.mediakit__download__link_btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+}
+</style>

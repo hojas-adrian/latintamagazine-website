@@ -66,6 +66,10 @@ export default {
         {
           text: 'Nosotros',
           url: '#about'
+        },
+        {
+          text: 'Anúnciate',
+          url: '#mediakit'
         }
       ]
     }
