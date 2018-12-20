@@ -37,6 +37,7 @@ module.exports = {
   ],
 
   plugins: [
-    '~/plugins/components'
+    '~/plugins/components',
+    { src: '~/plugins/scroll', ssr: false }
   ],
 }

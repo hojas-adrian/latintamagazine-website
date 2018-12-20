@@ -54,6 +54,14 @@ export default {
         },
       ]
     }
+  },
+
+  watch: {
+    '$route': function (to) {
+      const { hash } = to;
+
+      this.$scrollTo(hash, { animated: true });
+    }
   }
 }
 </script>

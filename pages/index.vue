@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <section id="mediakit">
+    <section id="mediakit" class="pt-5.5 pb-5.5">
       <div class="container mx-auto max-w-xl">
         <h1 class="uppercase text-base text-center tracking-wide pb-6">Anúnciate</h1>
         
