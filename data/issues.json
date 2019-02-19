@@ -101,5 +101,24 @@
         "description": "(144ppi)"
       }
     ]
+  },
+  {
+    "title": "ENE-FEB '19",
+    "number": 5,
+    "cover": {
+      "url": "/issues/05/05-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#05",
+        "url": "http://bit.ly/LaTinta_No05_96dpi",
+        "description": "(92ppi)"
+      },
+      {
+        "text": "#05",
+        "url": "http://bit.ly/LaTinta_No05_144dpi",
+        "description": "(144ppi)"
+      }
+    ]
   }
 ]
