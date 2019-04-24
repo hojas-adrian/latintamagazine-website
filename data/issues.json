@@ -120,5 +120,24 @@
         "description": "(144ppi)"
       }
     ]
+  },
+  {
+    "title": "MAR-ABR '19",
+    "number": 6,
+    "cover": {
+      "url": "/issues/06/06-cover.jpg"
+    },
+    "links": [
+      {
+        "text": "#06",
+        "url": "http://bit.ly/LaTinta_No06_96dpi",
+        "description": "(92ppi)"
+      },
+      {
+        "text": "#06",
+        "url": "http://bit.ly/LaTinta_No06_144dpi",
+        "description": "(144ppi)"
+      }
+    ]
   }
 ]
